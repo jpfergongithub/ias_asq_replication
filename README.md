@@ -2,9 +2,8 @@
 Replication materials for Ferguson &amp; Hasan 2013
 
 *************************************************************************
-* REPLICATION MATERIALS FOR "SPECIALIZATION AND CAREER DYNAMICS:        *
-* EVIDENCE FROM THE INDIAN ADMINISTRATIVE SERVICE"                      *
-* BY JOHN-PAUL FERGUSON AND SHARIQUE HASAN                              *
+REPLICATION MATERIALS FOR "SPECIALIZATION AND CAREER DYNAMICS: EVIDENCE FROM THE INDIAN ADMINISTRATIVE SERVICE"
+BY JOHN-PAUL FERGUSON AND SHARIQUE HASAN
 *************************************************************************
 
 DOI: 10.1177/0001839213486759
@@ -20,7 +19,7 @@ I am always happy to answer questions.
 --JP Ferguson
 
 *************************************************************************
-* STEP ZERO: BUILD STATA DATA FROM HTML FILES                           *
+STEP ZERO: BUILD STATA DATA FROM HTML FILES
 *************************************************************************
 
 This is probably the hardest step to reproduce, because of old code and file dependencies.  For what it's worth, I have preserved the files that come at the end of this step.
@@ -37,7 +36,7 @@ The code/ folder also has a Stata do-file, ias_csv2dta.do.  This reads in each o
 To summarize, and be clear: these six DTA files (tables 6 and 7 are combined) have all the information from the original HTML files, in a more friendly format.
 
 *************************************************************************
-* STEP ONE: BUILD THE ANALYSIS FILE                                     *
+STEP ONE: BUILD THE ANALYSIS FILE
 *************************************************************************
 
 Within code/ there is ias_data_building.do.  What it does is very much in the name.  There are a lot of individual changes to the data files in here; these reflect our cleaning up the data as best we could, to deal with typos and the like.  We also discuss the judgment calls we made about assigning various experiences, which can matter for the final results.
@@ -45,7 +44,7 @@ Within code/ there is ias_data_building.do.  What it does is very much in the na
 The final result is a file called working_ias.dta, which is saved in data/.
 
 *************************************************************************
-* STEP TWO: RUN THE ANALYSIS                                            *
+STEP TWO: RUN THE ANALYSIS
 *************************************************************************
 
 This part should hopefully be straightforward.  There is a script called ias_analysis.do in code/.  It produces the tables that are in the paper.
@@ -53,7 +52,7 @@ This part should hopefully be straightforward.  There is a script called ias_ana
 A word of warning: we used Stata's estout package to produce most of the tables.  You'll need that installed in Stata for many of the commands to run.  However, some of estout's internals have changed.  Thus the esttab command no longer writes all variable coefficients are not being written to the TEX files.  (This is why R has the groundhog library!)  You can always see the output in Stata's results window by removing the "quietly" prefixes to those commands.
 
 *************************************************************************
-* MISCELLANY: OTHER FILES                                               *
+MISCELLANY: OTHER FILES
 *************************************************************************
 
 code/promotion_probability_figure.do: This produces a graphic that appears in the online appendix.  It draws on working_ias.dta from data/ to do so.
